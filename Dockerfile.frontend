@@ -12,4 +12,4 @@ COPY . /home/ubuntu/main/chat360
 EXPOSE 3000
 RUN npm run build
 RUN bash deploy/upload.sh
-ENTRYPOINT npm run start:prod
+ENTRYPOINT npm run start
