@@ -1,4 +1,7 @@
 FROM node:18
+RUN apt-get -y install curl unzip groff less
+RUN	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN	unzip awscliv2.zip && ./aws/install
 
 WORKDIR /home/ubuntu/main/chat360
 COPY /package.json /home/ubuntu/main/chat360
